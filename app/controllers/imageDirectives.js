@@ -5,7 +5,7 @@
     return{
       restrict: 'E',
       scope: {
-        //stuff goes here
+        search: '='
       },
       templateUrl: "app/views/searchbar.html"
     };
@@ -15,7 +15,7 @@
     return{
       restrict: 'E',
       scope: {
-        //stuff goes here
+        images: '='
       },
       templateUrl: "app/views/gallery.html"
     };

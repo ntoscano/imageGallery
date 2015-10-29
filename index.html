@@ -17,7 +17,10 @@
   <title>Image Gallery</title>
  </head>
  <body>
-  <h1>Images</h1>
-  <search-bar></search-bar>
+  <div class="pageContainer" ng-controller="imgCtrl">
+    <h1>Images</h1>
+    <search-bar search="search"></search-bar>
+    <gallery images="images"></gallery>
+  </div>
  </body>
 </html>
