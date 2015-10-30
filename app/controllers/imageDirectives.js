@@ -8,7 +8,7 @@
         search: '=',
         tag: '='
       },
-      templateUrl: "views/searchbar.html"
+      templateUrl: "app/views/searchbar.html"
     };
   });
 
@@ -18,7 +18,7 @@
       scope: {
         images: '='
       },
-      templateUrl: "views/gallery.html"
+      templateUrl: "app/views/gallery.html"
     };
   });
 
@@ -28,7 +28,7 @@
       scope: {
         more: '='
       },
-      templateUrl: "views/more.html"
+      templateUrl: "app/views/more.html"
     };
   });
 
