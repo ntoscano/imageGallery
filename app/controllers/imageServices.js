@@ -11,7 +11,6 @@
         }).then(function successCallback(response) {
             data = response.data.substring(14, response.data.length - 1);
             data = JSON.parse(data);
-            console.log(data)
             cb(data.photos.photo);
           }, function errorCallback(response) {
             console.log('error', response)
