@@ -5,7 +5,8 @@
     return{
       restrict: 'E',
       scope: {
-        search: '='
+        search: '=',
+        tag: '='
       },
       templateUrl: "views/searchbar.html"
     };

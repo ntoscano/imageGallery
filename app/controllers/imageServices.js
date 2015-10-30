@@ -4,14 +4,16 @@
   app.service('imgSrvc', ['$http', function($http){
     var imageGetter = {
 
-      getImages: function(searchQ){
+      getImages: function(searchQ, cb){
         $http({
           method: 'GET',
-          url: 'https://www.googleapis.com/customsearch/v1?key=AIzaSyAPWYmCq7eUubTb5i2bZrJ_93Z_073JYKc&q=puppies'
+          url: 'https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=73149c6b7912be9eeade744e5cc35324&tags='+searchQ+'&format=json'
         }).then(function successCallback(response) {
-            console.log('fasdfasdf', response);
+            data = response.data.substring(14, response.data.length - 1);
+            data = JSON.parse(data);
+            cb(data.photos.photo);
           }, function errorCallback(response) {
-            console.log('errrrrrr', response)
+            console.log('error', response)
           });
       }
 

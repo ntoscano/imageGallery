@@ -2,5 +2,12 @@
   <span class="input-group-addon" id="basic-addon1">
     <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
   </span>
-  <input type="text" class="form-control" placeholder="Search Images" aria-describedby="basic-addon1">
+  <form ng-submit="search()" >
+    <input id="searchbar"
+          type="text"
+          class="form-control"
+          placeholder="Search Images"
+          ng-model="tag"
+          aria-describedby="basic-addon1">
+  </form>
 </div>
