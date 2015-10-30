@@ -9,7 +9,6 @@
     $scope.search = function(){
       page = 1;
       getImages($scope.tag, page, function(images){
-        console.log(images)
         $scope.images = images;
         $scope.more.alreadyDisplayingSome = true;
       })
@@ -17,7 +16,6 @@
 
     $scope.more = {
       getMore: function(){
-        console.log('ran');
         page++;
         getImages($scope.tag, page, function(images){
           console.log(images);
