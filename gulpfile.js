@@ -24,7 +24,7 @@ gulp.task('browserify', function (cb) {
 
 gulp.task('start', function() {
   return gulp.src('app')
-    .pipe(shell('node server.js'))
+    .pipe(shell('npm start'))
 });
 
 
