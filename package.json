@@ -5,8 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prestart": "npm install bower",
-    "prestart" : "bower install",
+    "prestart": "bower install",
     "start": "node server.js"
   },
   "repository": {
@@ -20,6 +19,7 @@
   },
   "homepage": "https://github.com/ntoscano/imageGallery#readme",
   "dependencies": {
+    "bower": "^1.6.5",
     "browserify": "^12.0.1",
     "express": "^4.13.3",
     "glob": "^5.0.15",
