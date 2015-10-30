@@ -5,8 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "postinstall": "./node_modules/bower/bin/bower install"
+    "postinstall": "./node_modules/bower/bin/bower install",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -20,5 +20,6 @@
   "homepage": "https://github.com/ntoscano/imageGallery#readme",
   "dependencies": {
     "bower": "^1.6.5",
+    "express": "^4.13.3"
   }
 }
