@@ -18,7 +18,6 @@
       getMore: function(){
         page++;
         getImages($scope.tag, page, function(images){
-          console.log(images);
           for(var i = 0; i < images.length; i++){
             $scope.images.push(images[i]);
           }
