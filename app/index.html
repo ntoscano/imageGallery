@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ImageGallery" class="no-js">
+ <head>
+  <script src="./lib/jquery/dist/jquery.min.js"></script>
+  <script src="./lib/angular/angular.js"></script>
+  <script src="./lib/angular-sanitize/angular-sanitize.js"></script>
+  <script src="./lib/angular-route/angular-route.js"></script>
+  <script src="./lib/bootstrap/dist/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="./lib/bootstrap/dist/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="./lib/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./styles/styles.css">
+  <script src="./app.js"></script>
+  <script src="./controllers/imageDirectives.js"></script>
+  <script src="./controllers/imageControllers.js"></script>
+  <script src="./controllers/imageServices.js"></script>
+  <meta charset="UTF-8">
+  <title>Image Gallery</title>
+ </head>
+ <body>
+  <div class="pageContainer" ng-controller="imgCtrl">
+    <h1>Images</h1>
+    <search-bar search="search"></search-bar>
+    <gallery images="images"></gallery>
+  </div>
+ </body>
+</html>

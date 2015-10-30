@@ -7,7 +7,7 @@
       scope: {
         search: '='
       },
-      templateUrl: "app/views/searchbar.html"
+      templateUrl: "views/searchbar.html"
     };
   });
 
@@ -17,7 +17,7 @@
       scope: {
         images: '='
       },
-      templateUrl: "app/views/gallery.html"
+      templateUrl: "views/gallery.html"
     };
   });
 
