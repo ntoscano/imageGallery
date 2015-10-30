@@ -1,18 +1,34 @@
 // deckController.js
 (function(){
-  var app = angular.module('imageControllers', ['imageService', 'ngSanitize']);
+  var app = angular.module('imageControllers', ['imageService']);
 
-  app.controller('imgCtrl', ['$scope','$sce','imgSrvc', function($scope, $sce, imgSrvc){
-    var getImages = imgSrvc.getImages;
+  app.controller('imgCtrl', ['$scope','imgSrvc', function($scope, imgSrvc){
     $scope.tag = '';
+    var getImages = imgSrvc.getImages;
+    var page = 1;
     $scope.search = function(){
-      getImages($scope.tag, function(images){
+      page = 1;
+      getImages($scope.tag, page, function(images){
         console.log(images)
         $scope.images = images;
+        $scope.more.alreadyDisplayingSome = true;
       })
-      $scope.tag = '';
     }
 
+    $scope.more = {
+      getMore: function(){
+        console.log('ran');
+        page++;
+        getImages($scope.tag, page, function(images){
+          console.log(images);
+          for(var i = 0; i < images.length; i++){
+            $scope.images.push(images[i]);
+          }
+        })
+      },
+
+      alreadyDisplayingSome: false
+    }
 
   }]);
 

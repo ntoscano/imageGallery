@@ -22,4 +22,14 @@
     };
   });
 
+  app.directive('more', function(){
+    return{
+      restrict: 'E',
+      scope: {
+        more: '='
+      },
+      templateUrl: "views/more.html"
+    };
+  });
+
 })();
