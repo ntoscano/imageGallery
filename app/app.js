@@ -2,7 +2,6 @@
 
 
 angular.module('ImageGallery', [
-  'ngSanitize',
   'imageDirectives',
   'imageControllers'
   ]);
